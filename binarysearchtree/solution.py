@@ -11,11 +11,9 @@ class Solution(object):
         if not n:
             return True
         val = n.val
-        if (low < val < high and
+        return (low < val < high and
                 self._is_valid_bst_helper(n.left, low, val) and
-                self._is_valid_bst_helper(n.right, val, high)):
-            return True
-        return False
+                self._is_valid_bst_helper(n.right, val, high))
 
     def is_valid_bst(self, n):
         return self._is_valid_bst_helper(n, float('-inf'), float('inf'))
