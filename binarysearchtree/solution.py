@@ -1,12 +1,13 @@
-class Node(object):
+class Node:
     def __init__(self, val, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
 
+
 # T: O(n)
 # S: O(n)
-class Solution(object):
+class Solution:
     def _is_valid_bst_helper(self, n, low, high):
         if not n:
             return True
