@@ -5,7 +5,7 @@ class LinkedListNode:
 
 
 # T: O(n) - max len l1 or l2
-# S: O(n) - 1 list
+# S: O(n) - 1 list, l1_current, l2_current are pointers - O(1)
 class Solution:
     def _add_two_numbers_helper(self, l1, l2):
         l1_current = l1
