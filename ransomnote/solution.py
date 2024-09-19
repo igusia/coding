@@ -3,7 +3,7 @@ from collections import Counter
 
 # T: O(len(letters) + len(message) + len(alphabet)) = O(m + n)
 # S: O(2 * len(alphabet)) = O(1)
-class Solution(object):
+class Solution:
     def _to_dict(self, text):
         if not text:
             return None
