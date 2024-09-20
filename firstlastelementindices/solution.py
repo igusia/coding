@@ -16,7 +16,7 @@ class Solution:
                 else:
                     high = mid - 1
             else:
-                if numbers[mid] == target and (mid == (len(numbers) - 1) or numbers[mid + 1] > target):
+                if numbers[mid] == target and (mid == len(numbers) - 1 or numbers[mid + 1] > target):
                     return mid
                 elif target < numbers[mid]:
                     high = mid - 1
@@ -30,6 +30,8 @@ class Solution:
         return self._binary_search_helper(numbers, target, False)
 
     def find_indices(self, numbers, target):
+        if not numbers:
+            return []
         first = self._binary_search_first(numbers, target)
         last = self._binary_search_last(numbers, target)
         return [first, last]
