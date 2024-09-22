@@ -2,7 +2,7 @@ unique_nums = [1, 2, 3]
 
 
 # T: O(n)
-# S: O(size of unique numbers) = O(3) = O(1)
+# S: O(size of returned array) + O(size of unique numbers) = O(n)
 class Solution:
     def _build_sorted_helper(self, counts, i):
         return [unique_nums[i]] * counts.get(unique_nums[i], 0)
