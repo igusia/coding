@@ -1,4 +1,4 @@
-# T: O(nlogn)
+# T: O(n^2 (insert n times n) + nlogn (sort)) = O(n^2)
 # S: O(n)
 class Solution:
     def reconstruct(self, heights):
