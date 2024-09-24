@@ -6,7 +6,7 @@ class MaxStack:
         self.maxes = []
 
     def push(self, el):
-        self.values = self.values + [el]
+        self.values = self.values.append(el)
         if not self.maxes or el > self.maxes[-1]:
             self.maxes.append(el)
         else:

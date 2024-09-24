@@ -5,7 +5,7 @@ class MaxStack:
         self.values = []
 
     def push(self, el):
-        self.values = self.values + [el]
+        self.values = self.values.append(el)
 
     def pop(self):
         last_el = self.values[-1]
