@@ -8,6 +8,8 @@ class MaxStack:
         self.values = self.values.append(el)
 
     def pop(self):
+        if not self.values:
+            return None
         last_el = self.values[-1]
         self.values = self.values[:-1]
         return last_el
