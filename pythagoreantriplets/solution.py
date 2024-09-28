@@ -14,9 +14,10 @@ class Solution:
         nums_squared = self.create_squares(nums)
         for num_i in nums:
             for num_j in nums:
-                result = num_i * num_i + num_j * num_j
-                if num_i < num_j and result in nums_squared:
-                    ret.add(tuple([num_i, num_j, math.floor(math.sqrt(result))]))
+                if num_i > 0 and num_j > 0:
+                    result = num_i * num_i + num_j * num_j
+                    if num_i < num_j and result in nums_squared:
+                        ret.add(tuple([num_i, num_j, math.floor(math.sqrt(result))]))
         return ret
 
 
