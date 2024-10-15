@@ -2,6 +2,10 @@
 # S: O(1)
 class Solution:
     def find_word(self, w, m):
+        if not len or len(w) < 1:
+            return True
+        if len(w) > len(m):
+            return False
         for row in m:
             for i in range(len(row)):
                 if row[i] != w[i]:
